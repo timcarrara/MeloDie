@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: "IBM Plex Sans";
+}
+h2{
+    font-family: "Gabarito";
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    
+   
+    font-family: Arial, sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+}
+  
+*{
+    margin: 0;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+.logo{
+    font-size: 25px;
+    font-family: "Ubuntu";
+    margin-right: 50px;
+    margin-left: 7%
+}
+header{
+    background-color: black;
+    padding: 25px 0 25px 0;
+    border-bottom: 3px solid white;
+}
+li{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
+    font-family: "IBM Plex Sans";
+}
+.menu input{
+    margin-left: 50px;
+    border-radius: 30px;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 8px;
+    width: 200px;
+}
+.hamburger{
+    display:none;
+    cursor: pointer;
+    margin: 20px;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+}
+.panier {
+    margin-left: 27%;
+    margin-right: 50px;
+    font-size: 25px;
+    color: white;
+}
+.menu h1{
+    font-size: 20px;
+    color: white;
+    margin-right: 7%;
+    font-family: "IBM Plex Sans";
+}
+
+
+.product-info {
+display: flex;  
+justify-content: center;
+margin: 20px;
+}
+
+.product-image img {
+max-width: 100%;
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product-details h2 {
+font-size: 24px;
+}
+
+.product-details .price {
+    font-size: 20px;
+color: #e44d26;
+}
+
+.buy-button {
+background-color: white;
+    border: solid black 1px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quantity-input{
+    width: fixed 100px;
+    height: 50px;
+    border: solid 1px black;
+    border-radius: 15px;
+    padding: 12px, 10px, 12px, 10px;
+}
+
+.bouton{
+    color:black;
+    text-decoration: none;
+}
+
+.buy-button:hover {
+    background-color: gray;
+    text-decoration: none;
+}
+
+.product-features{
+    border: solid 1px black;
+    width: 50vh;
+    margin-left: 40%;
+}
+
+.product-features ul {
+list-style-type: disc;
+margin-left: 20px;
+}
+
+.customer-reviews {
+    margin: 20px;
+}
+
+.review { 
+border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.review p {
+    font-size: 16px;
+}
+
+.review .reviewer {
+    font-weight: bold;
+    font-style: italic;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

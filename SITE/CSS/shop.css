@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body{
+    background-color: rgb(255, 255, 255);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: "IBM Plex Sans";
+}
+h2{
+    font-family: "Gabarito";
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.logo{
+    font-size: 25px;
+    font-family: "Ubuntu";
+    margin-right: 50px;
+    margin-left: 7%
+}
+header{
+    background-color: black;
+    padding: 25px 0 25px 0;
+    border-bottom: 3px solid white;
+}
+li{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
+    font-family: "IBM Plex Sans";
+}
+.menu input{
+    margin-left: 50px;
+    border-radius: 30px;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 8px;
+    width: 200px;
+}
+.hamburger{
+    display:none;
+    cursor: pointer;
+    margin: 20px;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+}
+.panier {
+    margin-left: 27%;
+    margin-right: 50px;
+    font-size: 25px;
+    color: white;
+}
+.menu h1{
+    font-size: 20px;
+    color: white;
+    margin-right: 7%;
+    font-family: "IBM Plex Sans";
+}
+
+
+
+
+
+.bloc{
+    background-color: rgb(0, 0, 0);
+    height: auto;
+    border-bottom: 1px solid white;
+    width: 100%;
+} 
+.bloc h1{
+    padding-top: 20px;
+    margin-left: 7%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+.bloc p{
+    margin-left: 7%;
+    color: rgb(255, 255, 255);
+    font-family: "Gabarito";
+    line-height: 40px;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.haut-articles{
+    display: flex;
+    justify-content: space-between;
+}
+.filtres{
+    margin-top: 27.762px;
+    margin-left: 7%;
+    display: flex;
+}
+.filtres h2{
+    margin-top: 3%;
+    font-size: 15px;
+    padding: 10px 15px 0 15px;
+    text-decoration: underline;
+}
+.liste{
+    margin-right: 7%;
+    margin-top: 29px;
+}
+.liste #liste_deroulante{
+    height: 35px;
+    width: 150px;
+    border: 2px solid black
+}
+.liste h3{
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+
+
+.checklist{
+    margin-left: 7%;
+    float: left;
+}
+.CD{
+    width: 200px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 25px;
+}
+.CD legend{
+    font-size: 25px;
+    font-family: "Gabarito";
+    color: rgb(0, 0, 0);
+}
+.CD label {
+  font-family: "IBM Plex Sans";
+  color: rgb(0, 0, 0);
+}
+.artistes{
+    width: 200px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 25px;
+}
+.artistes legend{
+    font-size: 25px;
+    font-family: "Gabarito";
+    color: rgb(0, 0, 0);
+}
+.artistes label {
+  font-family: "IBM Plex Sans";
+  color: rgb(0, 0, 0);
+}
+.certification{
+    width: 200px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.certification legend{
+    font-size: 25px;
+    font-family: "Gabarito";
+    color: rgb(0, 0, 0);
+}
+.certification label {
+  font-family: "IBM Plex Sans";
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+.Albums{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25%;
+    margin-right: 77.325px;
+    margin-top: 13px;
+    justify-content: center;
+} 
+.Album img{
+    width:240px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px 10px 0px 0px;
+}
+.Album h1{
+    font-family: "IBM Plex Sans";
+    font-size: 25px;
+    width: 240px;
+    padding: 5px 0 0 10px;
+    margin-top: 0%;
+    color: rgb(0, 0, 0);
+}
+.Album h2{
+    font-family: "Gabarito";
+    font-size: 22px;
+    padding-left: 10px;
+    color: rgb(0, 0, 0);
+}
+.Album h3{
+    font-family: "IBM Plex Sans";
+    font-size: 18px;
+    padding-left: 10px;
+    color: rgb(0, 0, 0);
+}
+.Description{
+    border: 1px solid rgb(0, 0, 0);
+    width: 240px;
+    margin-top: -5px;
+    height: 130px;
+    margin-bottom: 15px;
+    border-radius: 0px 0px 10px 10px;
+}
+.Description:hover{
+    background-color: rgb(149, 149, 149);
+    width: 240px;
+    cursor: pointer;
+}
+.Album img:hover + .Description{
+    background-color: rgb(149, 149, 149);
+    width: 240px;
+    cursor: pointer;
+}
+button{
+    border: 2px solid rgb(0, 0, 0); 
+    background-color: rgb(189, 183, 183);
+    padding: 15px 55px 15px 55px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 20px;
+}
+button:hover{
+    background-color: rgb(137, 137, 137);
+}
+
+
+
+.container{
+	width: 100%;
+}
+.row{
+	display: flex;
+    flex: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #000000;
+    padding: 50px 0;
+}
+.footer-col{
+    margin-left: 7%;
+}
+.footer-col h1{
+    font-size: 25px;
+    font-family: "Ubuntu";
+    color: white;
+}
+.footer-col h2{
+    padding-top: 10px;
+    font-size: 10px;
+    font-family: "Ubuntu";
+    color: white;
+}
+.formulaire{
+    display: flex;
+}
+.formulaire .bloc-mail{
+    margin-top: 10px;
+    width: 300px;
+    height: 35px;
+}
+.formulaire .connect{
+    margin-top: 10px;
+    width: 70px;
+    height: 35px;
+    border:none;
+    padding: 0 5px 0 5px; 
+    font-size: 12px; 
+    text-align: center; 
+}
+.colonnes{
+    display: flex;
+    margin-left: 7%;
+}
+.footer-col h4{
+	font-size: 17px;
+    font-family: "Ubuntu";
+	color: #ffffff;
+	margin-bottom: 15px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+    font-family: "Gabarito";
+	color: #ffffff;
+	text-decoration: none;
+	color: #bbbbbb;
+}
+
+@media (max-width: 768px){
+    .hamburger{
+        display:block
+	margin-left:50%;
+	margin-right: 25px
+    }
+    .menu input, .panier, .menu h1{
+        display: none;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top:70px;
+        gap:0;
+        flex-direction: column;
+        background-color: black;
+        width:100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 25px;
+    }
+    .menu ul li a{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left:0
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .checklist{
+        float: none;
+        text-align: center;
+    }
+    .CD, .artistes, .certification{
+        width: auto;
+        margin-right: 7%;
+    }
+    .certification{
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+@media(max-width: 768px){
+    .row{
+        display: block;
+    }
+    .footer-col{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .formulaire{
+        justify-content: center;
+    }
+    .colonnes{
+        justify-content: center;
+    }
+}

@@ -1,0 +1,250 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="produit.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Produit</title>
+        <link rel="icon" type="image/x-icon" href="Mélo-die (1).png">
+        <link rel="stylesheet" type="text/css" href="../../CSS/produit.css">
+    </head>
+    <body>
+        <header>
+        <nav class="menu">
+            <a href="../../../index.html" class="logo">Melo-Die</a>
+            <ul class="nav-menu">
+                <li><a href="../shop_page.html">Boutique</a></li>
+                <li><a href="#">Histoire</a></li>
+                <li><a href="#">A Propos</a></li>
+            </ul>
+            <input type="text" placeholder="Rechercher...">
+            <div class="panier">
+                <a href="../panier.html"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+            <a href="#"><h1>Login</h1></a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+<section class="product-info">     
+<div class="product-image">       
+<img src="Trap$tar3.jpg" alt="Image du produit">
+        
+</div>
+        
+        
+
+    
+<div class="product-details">
+            <h2>TRAP$TAR 3</h2>
+            
+        
+<p>Ce produit incroyable va révolutionner votre vie. Il a des caractéristiques incroyables et des avantages exceptionnels. Ne ratez pas cette opportunité unique d'améliorer votre quotidien.</p><br>
+            
+            
+<p class="total-price">Prix Total : <span id="total-amount">12.99 €</span></p><br>
+<div class="quantity">
+    <button class="decrement">-</button>
+    <input type="text" class ="quantity-input" id="quantity-input" value="1" min="1">
+    <button class="increment">+</button>
+</div>
+<br>
+<button class="buy-button" data-name="TRAP$TAR 3" data-price="12.99" data-image="Trap$tar3.jpg">Acheter Maintenant</button>
+</div>
+    
+
+<br>
+<br>   
+</section>
+    
+    <section class="product-features">
+        
+        
+<h2>Tracklist de l'album</h2><br>
+        <ul>
+            1.  Toute épreuve <br>
+            2.  Koke <br>
+            3.  Un monde imparfait <br>
+            4.  Dans le noir (feat. Gazo) <br>
+            5.  Préjudice <br>
+            6.  Sur le ban (feat. SDM) <br>
+            7.  Vovo <br>
+            8.  Libérez mes gars <br>
+            9.  Je m'en souviens <br>
+            10. God Bless (feat. Tiakola et RSKO) <br>
+            11. Ze Pequeno <br>
+            12. Tchtouchouchou <br>
+            13. Je me demande <br>
+            14. 187 mesures (feat. Ninho) <br>
+            15. Gang gang <br>
+            16. Yeah <br>
+            17. Immonde (feat. Koba LaD) <br>
+            18. One love
+
+        </ul>
+    
+    
+</section>
+    
+    
+    
+
+
+    
+<section class="customer-reviews">
+    <h2>Avis des Clients</h2><br>
+    <div class="review-form">
+        <h3>Laissez votre avis</h3><br>
+        <form id="review-form">
+            <input type="text" id="name" placeholder="Votre nom" required><br><br>
+            <input type="number" id="rating" placeholder="Note (1-5)" min="1" max="5" required><br><br>
+            <textarea id="comment" placeholder="Votre commentaire" required></textarea><br>
+            <button type="submit">Soumettre</button>
+        </form>
+    </div>
+    <div class="reviews" id="reviews-list">
+        <!-- Les avis des clients seront ajoutés ici dynamiquement -->
+    </div>
+</section>
+    
+    <footer>
+<p>&copy; 2023 Votre Société. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        menu-hamburger.js
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantityInput = document.getElementById('quantity-input');
+            const incrementButton = document.querySelector('.increment');
+            const decrementButton = document.querySelector('.decrement');
+            const pricePerUnit = 18.00; // Prix par unité
+    
+            function updateTotalPrice() {
+                const currentQuantity = parseInt(quantityInput.value);
+                const totalAmount = pricePerUnit * currentQuantity;
+                document.getElementById('total-amount').textContent = `${totalAmount.toFixed(2)} €`;
+            }
+    
+            incrementButton.addEventListener('click', function() {
+                let currentQuantity = parseInt(quantityInput.value);
+                quantityInput.value = currentQuantity + 1;
+                updateTotalPrice();
+            });
+    
+            decrementButton.addEventListener('click', function() {
+                let currentQuantity = parseInt(quantityInput.value);
+                if (currentQuantity > 1) {
+                    quantityInput.value = currentQuantity - 1;
+                    updateTotalPrice();
+                }
+            });
+    
+            quantityInput.addEventListener('input', updateTotalPrice);
+        });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Récupérer le bouton "Acheter" de la page de produit
+    const buyButton = document.querySelector('.buy-button');
+    const quantityInput = document.getElementById('quantity-input');
+
+    // Écouter le clic sur le bouton "Acheter"
+    buyButton.addEventListener('click', function() {
+        const productName = buyButton.getAttribute('data-name');
+        const productPrice = parseFloat(buyButton.getAttribute('data-price'));
+        const productImage = buyButton.getAttribute('data-image');
+        const productQuantity = parseInt(quantityInput.value);
+        addToCart(productName, productPrice, productImage, productQuantity);
+    });
+
+    // Fonction pour ajouter un produit au panier
+    function addToCart(name, price, image, quantity) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Ajouter le produit au panier
+        cart.push({ name, price, image, quantity });
+
+        // Mettre à jour le stockage local du navigateur avec les nouvelles données du panier
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Rediriger l'utilisateur vers la page du panier
+        window.location.href = '../panier.html';
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+const reviewForm = document.getElementById('review-form');
+const reviewsList = document.getElementById('reviews-list');
+
+// Structure de données pour stocker les avis
+let reviewsData = JSON.parse(localStorage.getItem('reviews')) || [];
+
+// Charger les avis existants depuis le localStorage
+for (const review of reviewsData) {
+    addReviewToPage(review);
+}
+
+reviewForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Récupérez les données du formulaire (nom, note, commentaire)
+    const name = document.getElementById('name').value;
+    const rating = document.getElementById('rating').value;
+    const comment = document.getElementById('comment').value;
+
+    // Créez un objet d'avis
+    const review = {
+        name: name,
+        rating: rating,
+        comment: comment
+    };
+
+    // Ajoutez l'avis à la structure de données
+    reviewsData.push(review);
+
+    // Sauvegardez les avis dans le localStorage
+    localStorage.setItem('reviews', JSON.stringify(reviewsData));
+
+    // Appeler une fonction pour ajouter l'avis à la page
+    addReviewToPage(review);
+
+    // Réinitialisez le formulaire
+    reviewForm.reset();
+});
+
+function addReviewToPage(review) {
+    const reviewElement = document.createElement('div');
+    reviewElement.classList.add('review');
+    reviewElement.innerHTML = `
+        <p>${review.name} a donné une note de ${review.rating}/5</p>
+        <p>${review.comment}</p>
+        <button class="delete-review">Supprimer</button>
+    `;
+
+    // Ajoutez un gestionnaire d'événements pour le bouton "Supprimer"
+    const deleteButton = reviewElement.querySelector('.delete-review');
+    deleteButton.addEventListener('click', function() {
+        // Supprimez l'avis de la structure de données
+        const index = reviewsData.indexOf(review);
+        if (index > -1) {
+            reviewsData.splice(index, 1);
+        }
+
+        // Supprimez l'élément HTML de l'avis de la page
+        reviewsList.removeChild(reviewElement);
+
+        // Mettez à jour le localStorage après la suppression
+        localStorage.setItem('reviews', JSON.stringify(reviewsData));
+    });
+
+    reviewsList.appendChild(reviewElement);
+}
+});
+    </script>
+
+</body>
+</html>
